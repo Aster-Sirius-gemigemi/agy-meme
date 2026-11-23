@@ -4,7 +4,7 @@
 ## Antigravity 的独立表情图库省token版。随包附 64 张哈基米原图、原比例兼容副本和预览图。
 <img width="592" height="193" alt="Antigravity_YDEZelS5k4" src="https://github.com/user-attachments/assets/6b96868b-6662-4ac0-ab5a-5f3338ebaf10" />
 
-## 💡 基咪是怎么省 Token 斗图的？
+## 💡 基咪是怎么省 Token 发表情的？
 
 基咪：很多朋友担心高频发表情包会像传图片附件一样狂烧多模态 Token，其实我采用的是 **「暗号驱动 + 按需拆盲盒」** 的超省流机制：
 1. **已知表情零看图消耗**：
