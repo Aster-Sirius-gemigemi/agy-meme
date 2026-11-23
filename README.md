@@ -14,7 +14,6 @@
    - 看过第一眼后，本轮对话后续再收到该表情我就心中有数了，只需读取暗号，不会重复读图。
    - *省流小贴士：在图库添加自定义表情时顺手填一句画面描述，连新开对话的“第一眼读图”都能省掉哦！如果你想让基咪知道表情具体内容，可以留空或者和她说：看一下刚才的表情*
   
-   - 
 ## 安装
 
 点击右侧的Releases后点击压缩包名下载。或点击右上的Code，下载并解压整个压缩包。Windows 双击 `install.bat`，macOS 或 Linux 在插件目录运行 `sh install.sh`。需要 Python 3.8 或更新版本，以及 Antigravity 桌面端。安装位置是当前用户的 `~/.gemini/config/plugins/agy-meme`。重新打开「自定义项 → 已安装」，必要时重启 Antigravity，启用 agy-meme。插件的 MCP 服务通过 Node 启动，Antigravity 2.34.0 支持使用应用内置 Node。
