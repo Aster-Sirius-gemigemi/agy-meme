@@ -17,7 +17,6 @@
 ## 安装
 
 点击右侧的Releases后点击压缩包名下载。或点击右上的Code，下载并解压整个压缩包。Windows 双击 `install.bat`，macOS 或 Linux 在插件目录运行 `sh install.sh`。需要 Python 3.8 或更新版本，以及 Antigravity 桌面端。安装位置是当前用户的 `~/.gemini/config/plugins/agy-meme`。重新打开「自定义项 → 已安装」，必要时重启 Antigravity，启用 agy-meme。插件的 MCP 服务通过 Node 启动，Antigravity 2.34.0 支持使用应用内置 Node。
-<img width="298" height="104" alt="image" src="https://github.com/user-attachments/assets/fe10300a-9be8-4f6b-b837-81d277ac62bd" />
 <img width="404" height="402" alt="image" src="https://github.com/user-attachments/assets/17510860-4b38-4b2f-8211-a344083f7930" />
 
 ## 选图和回图
