@@ -1,7 +1,7 @@
 # 🐱 agy-meme
 <img width="591" height="122" alt="Antigravity_HEHCbU67ni" src="https://github.com/user-attachments/assets/3bb36e0e-aed3-4b80-ac6e-9adb0b576fef" />
 
-## Antigravity 的独立表情图库。随包附 64 张哈基米原图、原比例兼容副本和预览图。
+## Antigravity 的独立表情图库省token版。随包附 64 张哈基米原图、原比例兼容副本和预览图。
 <img width="592" height="193" alt="Antigravity_YDEZelS5k4" src="https://github.com/user-attachments/assets/6b96868b-6662-4ac0-ab5a-5f3338ebaf10" />
 
 ## 💡 基咪是怎么省 Token 斗图的？
