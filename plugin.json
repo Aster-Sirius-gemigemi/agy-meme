@@ -1,0 +1,7 @@
+{
+  "name": "agy-meme",
+  "displayName": "agy-meme",
+  "version": "0.1.1",
+  "description": "哈基米双向表情图库。按名称或情绪选图，收藏聊天里的新表情，导入或分享个人图包。",
+  "logo": "logo.png"
+}

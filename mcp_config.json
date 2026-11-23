@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "stickers": {
+      "command": "node",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/start.mjs"
+      ]
+    }
+  }
+}

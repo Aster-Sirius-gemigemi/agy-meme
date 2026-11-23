@@ -1,0 +1,127 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🐱 表情图库</title>
+<style>
+:root{color-scheme:light dark;font:14px system-ui}body{margin:12px;color:var(--color-text-primary,CanvasText);background:var(--color-background-primary,Canvas)}
+button,input,select{font:inherit;color:inherit;border:1px solid #8886;border-radius:8px;padding:7px;background:transparent}button{cursor:pointer}button:hover{background:#8882}button:focus-visible{outline:2px solid Highlight}
+header,nav,form{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}#query{flex:1;min-width:120px}main{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
+main button{display:grid;place-items:center;gap:4px;font-size:12px}img{width:55px;height:55px;object-fit:contain}output{display:block;margin:5px 0;overflow-wrap:anywhere}form[hidden]{display:none}label{display:grid;gap:4px}input{max-width:100%}
+.custom-card{display:grid;align-content:start;gap:3px;min-width:0}.custom-card>button:first-child{width:100%}.remove{justify-self:center;padding:2px 7px;font-size:11px}
+#removal{margin:6px 0;padding:8px;border:1px solid #8886;border-radius:8px}#removal button{margin-left:5px}
+</style>
+<header><input id="query" placeholder="搜索名称或关键词" aria-label="搜索"><select id="category" aria-label="分类"></select></header>
+<nav><button id="add">添加表情</button><button id="importBtn">导入图包</button><button id="exportBtn">导出个人图包</button></nav>
+<input hidden id="zip" type="file" accept=".zip"><form id="collect" hidden><label>原图<input id="file" type="file" accept="image/png,image/jpeg,image/webp,image/gif" required></label><label>表情名<input id="nameInput" maxlength="40" required></label><label>分类<input id="tag" maxlength="40" value="自定义"></label><label>含义或关键词<input id="words" maxlength="500"></label><button>收藏</button></form>
+<div id="removal" hidden><span id="removeText"></span><button id="confirmRemove">删除</button><button id="cancelRemove">取消</button></div>
+<output id="status" aria-live="polite"></output><input id="copyField" aria-label="选中的表情暗号" readonly hidden><main id="grid"></main>
+<script>
+const byId=id=>document.getElementById(id);
+const statusBox=byId('status'),grid=byId('grid'),pending=new Map(),cache=new Map();
+let serial=0, all=[], generation=0;
+function request(method,params) {
+  const id=++serial;
+  return new Promise((resolve,reject)=>{
+    const timeout=setTimeout(()=>{pending.delete(id);reject(Error('图库连接超时，请重新打开面板'))},30000);
+    pending.set(id,{resolve,reject,timeout});
+    parent.postMessage({jsonrpc:'2.0',id,method,params},'*');
+  });
+}
+window.addEventListener('message',event=>{
+  if(event.source!==parent)return;
+  const msg=event.data, wait=pending.get(msg?.id);
+  if(!wait || msg.jsonrpc!=='2.0' || (!('result' in msg)&&!msg.error))return;
+  clearTimeout(wait.timeout);pending.delete(msg.id);
+  if(msg.error)wait.reject(Error(msg.error.message));else wait.resolve(msg.result);
+});
+async function call(name,args={}) {
+  const r=await request('tools/call',{name,arguments:args});
+  if(r.isError)throw Error(r.content?.[0]?.text||'工具调用失败');
+  return r.structuredContent??JSON.parse(r.content[0].text);
+}
+function handle(fn){return async e=>{try{await fn(e)}catch(err){statusBox.textContent=err.message}}}
+async function copyToken(name) {
+  const token=':'+name+':',field=byId('copyField');
+  field.hidden=false;field.value=token;field.select();
+  let copied=false;
+  try {await navigator.clipboard.writeText(token);copied=true}catch{copied=document.execCommand('copy')}
+  statusBox.textContent=copied?'已复制，可粘贴到草稿继续配字。':'请复制下方选中的暗号，粘贴到草稿。';
+}
+async function draw(){
+  const turn=++generation,q=byId('query').value.trim().toLowerCase(),cat=byId('category').value;
+  grid.replaceChildren();
+  const images=[];
+  for(const s of all.filter(s=>(!cat||s.category===cat)&&(s.name+s.keywords+s.category).toLowerCase().includes(q))){
+    const b=document.createElement('button'),img=new Image(),label=document.createElement('span');
+    label.textContent=s.name;img.alt='';b.title='复制 :'+s.name+':';b.onclick=handle(()=>copyToken(s.name));b.append(img,label);
+    if(s.custom){
+      const card=document.createElement('div'),remove=document.createElement('button');
+      card.className='custom-card';remove.className='remove';remove.textContent='删除';
+      remove.setAttribute('aria-label','删除「'+s.name+'」');
+      remove.onclick=()=>{pendingName=s.name;byId('removeText').textContent='从个人图库删除「'+s.name+'」？';byId('removal').hidden=false;byId('cancelRemove').focus();};
+      card.append(b,remove);grid.append(card);
+    }else grid.append(b);
+    if(cache.has(s.name))img.src=cache.get(s.name);else images.push([s.name,img]);
+  }
+  if(!grid.childElementCount)grid.textContent='没有匹配的表情';
+  async function worker(){while(images.length&&turn===generation){const [name,img]=images.shift();const {url}=await call('thumbnail',{name});cache.set(name,url);img.src=url}}
+  await Promise.all([worker(),worker()]);
+}
+let refreshSequence=0;
+async function refresh(onlyChanged=false){
+  const sequence=++refreshSequence;
+  const next=(await call('list_ui')).stickers;
+  if(sequence!==refreshSequence)return;
+  if(onlyChanged && JSON.stringify(next)===JSON.stringify(all))return;
+  const names=new Set(next.map(s=>s.name));
+  for(const name of cache.keys())if(!names.has(name))cache.delete(name);
+  if(pendingName && !names.has(pendingName))closeRemoval();
+  all=next;
+  const select=byId('category'),cur=select.value;
+  select.replaceChildren(new Option('全部分类',''),...Array.from(new Set(all.map(s=>s.category)),s=>new Option(s,s)));
+  select.value=[...select.options].some(o=>o.value===cur)?cur:'';await draw();
+}
+let pendingName=null;
+function closeRemoval(){pendingName=null;byId('removal').hidden=true}
+byId('cancelRemove').onclick=closeRemoval;
+byId('confirmRemove').onclick=handle(async()=>{
+  const name=pendingName;if(!name)return;
+  closeRemoval();
+  try{
+    await call('delete_sticker',{name});cache.delete(name);
+    const field=byId('copyField');if(field.value===':'+name+':'){field.value='';field.hidden=true}
+    statusBox.textContent='已删除「'+name+'」';
+  }finally{await refresh()}
+});
+function base64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=()=>rej(Error('读取文件失败'));r.readAsDataURL(file)})}
+async function preview(file){
+  const bmp=await createImageBitmap(file);
+  const canvas=document.createElement('canvas');canvas.width=96;canvas.height=96;
+  const factor=Math.min(96/bmp.width,96/bmp.height),w=bmp.width*factor,h=bmp.height*factor;
+  canvas.getContext('2d').drawImage(bmp,(96-w)/2,(96-h)/2,w,h);bmp.close();
+  return canvas.toDataURL('image/png').split(',')[1];
+}
+byId('query').oninput=byId('category').onchange=handle(draw);
+byId('add').onclick=()=>{byId('collect').hidden=!byId('collect').hidden};
+byId('file').onchange=()=>{const f=byId('file').files[0];if(f)byId('nameInput').value=f.name.replace(/\.[^.]+$/,'').slice(0,40)};
+byId('collect').onsubmit=handle(async e=>{
+  e.preventDefault();const file=byId('file').files[0];if(!file)return;
+  if(file.size>8*1024*1024)throw Error('图片最大 8 MiB');
+  const name=byId('nameInput').value.trim();
+  await call('collect_upload',{name,category:byId('tag').value,keywords:byId('words').value,image:await base64(file),preview:await preview(file)});
+  byId('collect').reset();byId('collect').hidden=true;byId('query').value='';byId('category').value='';
+  statusBox.textContent='已收藏「'+name+'」';await refresh();
+});
+byId('importBtn').onclick=()=>byId('zip').click();
+byId('zip').onchange=handle(async e=>{
+  const f=e.target.files[0];if(!f)return;e.target.value='';
+  if(f.size>8*1024*1024)throw Error('大于 8 MiB 的图包请在聊天中指定 ZIP 文件路径导入。');
+  const result=await call('import_upload',{zip:await base64(f)});statusBox.textContent='已导入 '+result.added+' 张';await refresh();
+});
+byId('exportBtn').onclick=handle(async()=>{const r=await call('export_pack');statusBox.textContent='已导出 '+r.count+' 张：'+r.path});
+handle(async()=>{
+  await request('ui/initialize',{appInfo:{name:'agy-meme',version:'0.1.1'},appCapabilities:{},protocolVersion:'2026-01-26'});
+  parent.postMessage({jsonrpc:'2.0',method:'ui/notifications/initialized',params:{}},'*');
+  await refresh();
+  window.addEventListener('focus',handle(()=>refresh(true)));
+  setInterval(()=>{if(!document.hidden)refresh(true).catch(()=>{});},2500);
+})();
+</script></html>

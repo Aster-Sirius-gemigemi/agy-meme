@@ -1,0 +1,514 @@
+[
+  {
+    "id": "01",
+    "name": "元气招手",
+    "emoji": "😄",
+    "category": "开心",
+    "keywords": "元气满满招手打招呼、嗨、早安",
+    "filename": "01_元气招手_😄.png"
+  },
+  {
+    "id": "02",
+    "name": "闭眼大笑",
+    "emoji": "😆",
+    "category": "开心",
+    "keywords": "闭眼开心大笑、太好笑了、哈哈",
+    "filename": "02_闭眼大笑_😆.png"
+  },
+  {
+    "id": "03",
+    "name": "咧嘴露齿",
+    "emoji": "😁",
+    "category": "开心",
+    "keywords": "咧嘴露齿傻笑、得意、嘿嘿",
+    "filename": "03_咧嘴露齿_😁.png"
+  },
+  {
+    "id": "04",
+    "name": "礼貌微笑",
+    "emoji": "🙂",
+    "category": "日常",
+    "keywords": "礼貌微笑、乖巧听讲、嗯嗯",
+    "filename": "04_礼貌微笑_🙂.png"
+  },
+  {
+    "id": "05",
+    "name": "满地打滚",
+    "emoji": "🤣",
+    "category": "开心",
+    "keywords": "笑到满地打滚、笑死我了、爆笑",
+    "filename": "05_满地打滚_🤣.png"
+  },
+  {
+    "id": "06",
+    "name": "汗颜苦笑",
+    "emoji": "😅",
+    "category": "日常",
+    "keywords": "汗颜苦笑、尴尬又不失礼貌、擦汗",
+    "filename": "06_汗颜苦笑_😅.png"
+  },
+  {
+    "id": "07",
+    "name": "天使纯良",
+    "emoji": "😇",
+    "category": "可爱",
+    "keywords": "头顶光环天使纯良、无辜、我最乖了",
+    "filename": "07_天使纯良_😇.png"
+  },
+  {
+    "id": "08",
+    "name": "单眼眨眼",
+    "emoji": "😉",
+    "category": "可爱",
+    "keywords": "单眼眨眼放电、Wink、懂的都懂",
+    "filename": "08_单眼眨眼_😉.png"
+  },
+  {
+    "id": "09",
+    "name": "调皮吐舌",
+    "emoji": "😜",
+    "category": "可爱",
+    "keywords": "调皮吐舌头、略略略、做鬼脸",
+    "filename": "09_调皮吐舌_😜.png"
+  },
+  {
+    "id": "10",
+    "name": "流口水",
+    "emoji": "🤤",
+    "category": "搞怪",
+    "keywords": "流口水、馋了、想吃好吃的、好色",
+    "filename": "10_流口水_🤤.png"
+  },
+  {
+    "id": "11",
+    "name": "双眼爱心",
+    "emoji": "😍",
+    "category": "可爱",
+    "keywords": "双眼冒爱心、超喜欢、心动崇拜",
+    "filename": "11_双眼爱心_😍.png"
+  },
+  {
+    "id": "12",
+    "name": "飞吻比心",
+    "emoji": "😘",
+    "category": "可爱",
+    "keywords": "飞吻比心、啵啵、爱你哟",
+    "filename": "12_飞吻比心_😘.png"
+  },
+  {
+    "id": "13",
+    "name": "幸福被宠",
+    "emoji": "🥰",
+    "category": "可爱",
+    "keywords": "幸福被宠、冒小爱心、贴贴抱抱",
+    "filename": "13_幸福被宠_🥰.png"
+  },
+  {
+    "id": "14",
+    "name": "从容装酷",
+    "emoji": "😎",
+    "category": "日常",
+    "keywords": "戴墨镜从容装酷、拿捏、小菜一碟",
+    "filename": "14_从容装酷_😎.png"
+  },
+  {
+    "id": "15",
+    "name": "歪嘴坏笑",
+    "emoji": "😏",
+    "category": "搞怪",
+    "keywords": "歪嘴坏笑、邪魅一笑、事情并不简单",
+    "filename": "15_歪嘴坏笑_😏.png"
+  },
+  {
+    "id": "16",
+    "name": "面瘫无语",
+    "emoji": "😐",
+    "category": "日常",
+    "keywords": "面瘫无语、盯——、沉默是金",
+    "filename": "16_面瘫无语_😐.png"
+  },
+  {
+    "id": "17",
+    "name": "大翻白眼",
+    "emoji": "🙄",
+    "category": "生气",
+    "keywords": "大翻白眼、就这？、懒得理你",
+    "filename": "17_大翻白眼_🙄.png"
+  },
+  {
+    "id": "18",
+    "name": "斜嘴角纠结",
+    "emoji": "🫤",
+    "category": "思考",
+    "keywords": "斜嘴角纠结、嘶——、有点难办",
+    "filename": "18_斜嘴角纠结_🫤.png"
+  },
+  {
+    "id": "19",
+    "name": "惊恐倒吸凉气",
+    "emoji": "😨",
+    "category": "难过",
+    "keywords": "惊恐倒吸凉气、害怕、脸色发青",
+    "filename": "19_惊恐倒吸凉气_😨.png"
+  },
+  {
+    "id": "20",
+    "name": "痛苦抓狂",
+    "emoji": "😫",
+    "category": "难过",
+    "keywords": "痛苦抓狂、抱头崩溃、怎么会这样",
+    "filename": "20_痛苦抓狂_😫.png"
+  },
+  {
+    "id": "21",
+    "name": "垂头丧气",
+    "emoji": "😞",
+    "category": "难过",
+    "keywords": "垂头丧气、失落叹气、猫耳耷拉",
+    "filename": "21_垂头丧气_😞.png"
+  },
+  {
+    "id": "22",
+    "name": "红脸暴怒",
+    "emoji": "😡",
+    "category": "生气",
+    "keywords": "红脸暴怒、气鼓鼓、红温了",
+    "filename": "22_红脸暴怒_😡.png"
+  },
+  {
+    "id": "23",
+    "name": "傲娇喷气",
+    "emoji": "😤",
+    "category": "生气",
+    "keywords": "傲娇喷气、哼！、不理你了",
+    "filename": "23_傲娇喷气_😤.png"
+  },
+  {
+    "id": "24",
+    "name": "嘴巴贴乱码",
+    "emoji": "🤬",
+    "category": "生气",
+    "keywords": "嘴巴贴乱码封条、口吐芬芳、脏话屏蔽",
+    "filename": "24_嘴巴贴乱码_🤬.png"
+  },
+  {
+    "id": "25",
+    "name": "崩溃大哭",
+    "emoji": "😭",
+    "category": "难过",
+    "keywords": "崩溃大哭、泪流成河、掉小珍珠",
+    "filename": "25_崩溃大哭_😭.png"
+  },
+  {
+    "id": "26",
+    "name": "软萌委屈",
+    "emoji": "🥺",
+    "category": "可爱",
+    "keywords": "软萌委屈、眼泪汪汪、求安慰",
+    "filename": "26_软萌委屈_🥺.png"
+  },
+  {
+    "id": "27",
+    "name": "含泪微笑",
+    "emoji": "🥲",
+    "category": "难过",
+    "keywords": "含泪微笑、坚强抹泪、苦中作乐",
+    "filename": "27_含泪微笑_🥲.png"
+  },
+  {
+    "id": "28",
+    "name": "休眠待机",
+    "emoji": "😴",
+    "category": "日常",
+    "keywords": "休眠待机、睡着吹鼻涕泡、晚安",
+    "filename": "28_休眠待机_😴.png"
+  },
+  {
+    "id": "29",
+    "name": "大打哈欠",
+    "emoji": "🥱",
+    "category": "日常",
+    "keywords": "大打哈欠、困迷糊了、摸鱼犯困",
+    "filename": "29_大打哈欠_🥱.png"
+  },
+  {
+    "id": "30",
+    "name": "震惊呆滞",
+    "emoji": "😱",
+    "category": "搞怪",
+    "keywords": "震惊呆滞、呐喊脸、下巴掉地上",
+    "filename": "30_震惊呆滞_😱.png"
+  },
+  {
+    "id": "31",
+    "name": "目瞪口呆",
+    "emoji": "😲",
+    "category": "思考",
+    "keywords": "目瞪口呆、满头问号、啊？",
+    "filename": "31_目瞪口呆_😲.png"
+  },
+  {
+    "id": "32",
+    "name": "脑洞大开",
+    "emoji": "🤯",
+    "category": "搞怪",
+    "keywords": "脑洞大开、头顶蘑菇云爆炸、CPU烧了",
+    "filename": "32_脑洞大开_🤯.png"
+  },
+  {
+    "id": "33",
+    "name": "深度思考",
+    "emoji": "🤔",
+    "category": "思考",
+    "keywords": "托腮深度思考、让我想想、推理中",
+    "filename": "33_深度思考_🤔.png"
+  },
+  {
+    "id": "34",
+    "name": "单边挑眉",
+    "emoji": "🤨",
+    "category": "思考",
+    "keywords": "单边挑眉、怀疑审视、嗯？是吗",
+    "filename": "34_单边挑眉_🤨.png"
+  },
+  {
+    "id": "35",
+    "name": "单片眼镜",
+    "emoji": "🧐",
+    "category": "思考",
+    "keywords": "戴单片眼镜拿放大镜、严谨考据、抓虫挑刺",
+    "filename": "35_单片眼镜_🧐.png"
+  },
+  {
+    "id": "36",
+    "name": "蚊香眼",
+    "emoji": "😵‍💫",
+    "category": "搞怪",
+    "keywords": "蚊香眼晕头转向、转晕了、迷糊",
+    "filename": "36_蚊香眼_😵‍💫.png"
+  },
+  {
+    "id": "37",
+    "name": "虚线隐身",
+    "emoji": "🫥",
+    "category": "日常",
+    "keywords": "虚线隐身、悄悄溜走、假装不在",
+    "filename": "37_虚线隐身_🫥.png"
+  },
+  {
+    "id": "38",
+    "name": "融化一滩",
+    "emoji": "🫠",
+    "category": "搞怪",
+    "keywords": "融化成一滩猫猫液体、彻底躺平、废了",
+    "filename": "38_融化一滩_🫠.png"
+  },
+  {
+    "id": "39",
+    "name": "长叹一口气",
+    "emoji": "😮‍💨",
+    "category": "日常",
+    "keywords": "长叹一口气、吐魂、终于忙完了",
+    "filename": "39_长叹一口气_😮‍💨.png"
+  },
+  {
+    "id": "40",
+    "name": "双眼放星",
+    "emoji": "🤩",
+    "category": "开心",
+    "keywords": "双眼放星光、星星眼、太棒啦",
+    "filename": "40_双眼放星_🤩.png"
+  },
+  {
+    "id": "41",
+    "name": "双颊爆红",
+    "emoji": "😳",
+    "category": "可爱",
+    "keywords": "捂脸双颊爆红、害羞到冒烟、羞耻",
+    "filename": "41_双颊爆红_😳.png"
+  },
+  {
+    "id": "42",
+    "name": "龇牙咧嘴",
+    "emoji": "😬",
+    "category": "日常",
+    "keywords": "龇牙咧嘴倒吸气、好险、替你捏把汗",
+    "filename": "42_龇牙咧嘴_😬.png"
+  },
+  {
+    "id": "43",
+    "name": "大小眼发癫",
+    "emoji": "🤪",
+    "category": "搞怪",
+    "keywords": "大小眼发癫、精神状态良好、发疯整活",
+    "filename": "43_大小眼发癫_🤪.png"
+  },
+  {
+    "id": "44",
+    "name": "捂嘴噗嗤",
+    "emoji": "🤭",
+    "category": "可爱",
+    "keywords": "捂嘴噗嗤偷笑、看破不说破、偷乐",
+    "filename": "44_捂嘴噗嗤_🤭.png"
+  },
+  {
+    "id": "45",
+    "name": "食指抵唇",
+    "emoji": "🤫",
+    "category": "日常",
+    "keywords": "食指抵唇嘘——、保密、悄悄话",
+    "filename": "45_食指抵唇_🤫.png"
+  },
+  {
+    "id": "46",
+    "name": "恶心反胃",
+    "emoji": "🤮",
+    "category": "搞怪",
+    "keywords": "恶心反胃吐彩虹、yue了、吃撑了",
+    "filename": "46_恶心反胃_🤮.png"
+  },
+  {
+    "id": "47",
+    "name": "见钱眼开",
+    "emoji": "🤑",
+    "category": "开心",
+    "keywords": "见钱眼开、发财啦、算力自由",
+    "filename": "47_见钱眼开_🤑.png"
+  },
+  {
+    "id": "48",
+    "name": "欢庆派对",
+    "emoji": "🥳",
+    "category": "开心",
+    "keywords": "戴派对帽欢庆吹哨、撒花庆祝、完结撒花",
+    "filename": "48_欢庆派对_🥳.png"
+  },
+  {
+    "id": "49",
+    "name": "微醺恍惚",
+    "emoji": "🥴",
+    "category": "搞怪",
+    "keywords": "微醺恍惚、醉醺醺、嗨大了",
+    "filename": "49_微醺恍惚_🥴.png"
+  },
+  {
+    "id": "50",
+    "name": "热到融化",
+    "emoji": "🥵",
+    "category": "搞怪",
+    "keywords": "热到融化吐舌头、显卡发烫、太热了",
+    "filename": "50_热到融化_🥵.png"
+  },
+  {
+    "id": "51",
+    "name": "冷到结冰",
+    "emoji": "🥶",
+    "category": "难过",
+    "keywords": "冷到结冰挂冰碴、瑟瑟发抖、心拔凉",
+    "filename": "51_冷到结冰_🥶.png"
+  },
+  {
+    "id": "52",
+    "name": "举手敬礼",
+    "emoji": "🫡",
+    "category": "日常",
+    "keywords": "举手敬礼、收到！保证完成任务、Yes Sir",
+    "filename": "52_举手敬礼_🫡.png"
+  },
+  {
+    "id": "53",
+    "name": "指缝偷看",
+    "emoji": "🫣",
+    "category": "可爱",
+    "keywords": "捂脸从指缝偷看、暗中观察、害羞偷瞄",
+    "filename": "53_指缝偷看_🫣.png"
+  },
+  {
+    "id": "54",
+    "name": "左右狂晃",
+    "emoji": "🫨",
+    "category": "搞怪",
+    "keywords": "左右狂晃残影、高频震动、兴奋/慌张抖动",
+    "filename": "54_左右狂晃_🫨.png"
+  },
+  {
+    "id": "55",
+    "name": "张臂求抱",
+    "emoji": "🤗",
+    "category": "可爱",
+    "keywords": "张开双臂求抱抱、豪猫！、欢迎回家",
+    "filename": "55_张臂求抱_🤗.png"
+  },
+  {
+    "id": "56",
+    "name": "上下颠倒",
+    "emoji": "🙃",
+    "category": "搞怪",
+    "keywords": "整只猫上下颠倒、倒反天罡、反向操作",
+    "filename": "56_上下颠倒_🙃.png"
+  },
+  {
+    "id": "57",
+    "name": "负伤病号",
+    "emoji": "🤕",
+    "category": "难过",
+    "keywords": "头缠绷带负伤病号、被掀桌打伤、需要抢救",
+    "filename": "57_负伤病号_🤕.png"
+  },
+  {
+    "id": "58",
+    "name": "摇头摇手",
+    "emoji": "🙂‍↔",
+    "category": "日常",
+    "keywords": "摇头摆手拒绝、达咩、不行不行",
+    "filename": "58_摇头摇手_🙂‍↔.png"
+  },
+  {
+    "id": "59",
+    "name": "上下点头",
+    "emoji": "🙂‍↕",
+    "category": "开心",
+    "keywords": "上下点头竖大拇指、非常赞同、没毛病",
+    "filename": "59_上下点头_🙂‍↕.png"
+  },
+  {
+    "id": "60",
+    "name": "皮诺曹长鼻",
+    "emoji": "🤥",
+    "category": "搞怪",
+    "keywords": "皮诺曹长鼻子、心虚扯谎、我没画科比",
+    "filename": "60_皮诺曹长鼻_🤥.png"
+  },
+  {
+    "id": "61",
+    "name": "大胡子假面",
+    "emoji": "🥸",
+    "category": "搞怪",
+    "keywords": "戴圆眼镜大胡子假面、伪装潜入、没人认出我",
+    "filename": "61_大胡子假面_🥸.png"
+  },
+  {
+    "id": "62",
+    "name": "极客学霸",
+    "emoji": "🤓",
+    "category": "思考",
+    "keywords": "黑框眼镜极客学霸、推眼镜、根据我的计算",
+    "filename": "62_极客学霸_🤓.png"
+  },
+  {
+    "id": "63",
+    "name": "双子宇航",
+    "emoji": "🧑‍🚀",
+    "category": "开心",
+    "keywords": "穿宇航服竖大拇指、双子星升空、星辰大海",
+    "filename": "63_双子宇航_🧑‍🚀.png"
+  },
+  {
+    "id": "64",
+    "name": "极光孪星",
+    "emoji": "🌟",
+    "category": "可爱",
+    "keywords": "手捧极光双子星、璀璨星芒、基咪本咪",
+    "filename": "64_极光孪星_🌟.png"
+  }
+]

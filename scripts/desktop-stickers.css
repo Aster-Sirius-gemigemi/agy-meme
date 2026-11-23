@@ -1,0 +1,33 @@
+/* Antigravity 2.34 Markdown media cards. The alt marker survives blob URL resolution. */
+[class~="group/media"]:has(> .border :is(
+  img[alt^="agy-meme · "],
+  [data-carousel-media-src*="/agy-meme/assets/sticker/" i],
+  [data-carousel-media-src*="/plugin_data/agy-meme/images/" i],
+  [data-carousel-media-src*="/agy-meme-data/images/" i],
+  img[src*="/agy-meme/assets/sticker/" i],
+  img[src*="/plugin_data/agy-meme/images/" i]
+)) {
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: min(136px, 100%) !important;
+  vertical-align: middle;
+  background: transparent !important;
+  & > .border {
+    width: fit-content !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  & > .border div:has(> img) { width: fit-content !important; }
+  & > .border img {
+    display: block;
+    width: auto !important;
+    height: auto !important;
+    max-width: min(136px, 100%) !important;
+    max-height: 136px !important;
+    object-fit: contain !important;
+  }
+  &:has(> .border img[alt^="agy-meme · "]) > .italic { display: none; }
+}
