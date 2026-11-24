@@ -63,6 +63,7 @@ Windows 双击 `uninstall.bat`，macOS 或 Linux 运行 `sh uninstall.sh`。升�
 
 - **功能灵感与架构参考**：[yyh-001/dsh-meme](https://github.com/yyh-001/dsh-meme)
 - **内置哈基米表情包来源**：[Bilibili (BV1F34G6BEVA)](https://www.bilibili.com/video/BV1F34G6BEVA)
+- **claude表情包来源**：[Bilibili (BV1nuxQ6EEoN)](https://www.bilibili.com/video/BV1nuxQ6EEoN)
 - **哈基米（Gemini）人设原案**：**zipzippipe**
 
 本项目代码100%AI，0%人类。
