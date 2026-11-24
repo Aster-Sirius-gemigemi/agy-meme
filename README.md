@@ -46,6 +46,7 @@
 ## 收图与分享
 
 在图库点「添加表情」，选 PNG、JPEG、GIF 或 WebP，填名称、分类和含义。单张最大 8 MiB。也可在聊天中指明图片并要求收藏；客户端需向基咪提供可读取的本地路径。如果只有聊天缩略图，请用图库选择原文件。收藏后即可搜索并让基咪回图。
+
 <img width="351" height="389" alt="Antigravity_X5jxYO1ILD" src="https://github.com/user-attachments/assets/b9f2380a-101f-4e23-931d-d7489ccc6dce" />
 
 点「导出个人图包」得到本机 ZIP 路径，把 ZIP 发给朋友即可。接收方在图库点「导入图包」。超过 8 MiB 时，让基咪用本机 ZIP 路径导入；单包最大 64 MiB。相同名字和图片重复导入会跳过，同名异图会取消整次导入。
