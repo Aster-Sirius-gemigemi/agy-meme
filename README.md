@@ -18,13 +18,14 @@
 
 **[点我直接下载](https://github.com/user-attachments/files/35278287/agy-meme-0.1.1.zip)**
 
-点击右侧的Releases后点击压缩包名下载。或点击右上的Code，下载并解压整个压缩包。Windows 双击 `install.bat`，macOS 或 Linux 在插件目录运行 `sh install.sh`。需要 Python 3.8 或更新版本，以及 Antigravity 桌面端。安装位置是当前用户的 `~/.gemini/config/plugins/agy-meme`。重新打开「自定义项 → 已安装」，必要时重启 Antigravity，启用 agy-meme。插件的 MCP 服务通过 Node 启动，Antigravity 2.34.0 支持使用应用内置 Node。
 
 <img width="404" height="402" alt="image" src="https://github.com/user-attachments/assets/17510860-4b38-4b2f-8211-a344083f7930" />
+点击右侧的Releases后点击压缩包名下载。或点击右上的Code，下载并解压整个压缩包。Windows 双击 `install.bat`，macOS 或 Linux 在插件目录运行 `sh install.sh`。需要 Python 3.8 或更新版本，以及 Antigravity 桌面端。安装位置是当前用户的 `~/.gemini/config/plugins/agy-meme`。重新打开「自定义项 → 已安装」，必要时重启 Antigravity，启用 agy-meme。插件的 MCP 服务通过 Node 启动，Antigravity 2.34.0 支持使用应用内置 Node。
 
 
 
 **[点我下载claude64张表情扩展包](https://github.com/user-attachments/files/35328852/claude_64_agy-meme_pack.zip)**
+
 <img width="409" height="392" alt="image" src="https://github.com/user-attachments/assets/89c089e3-300c-4841-af72-10105487e60f" />
 
 ✨在antigravity里用claude大小姐的可以再装上这套。我刚导出了带暗号格式的表情包压缩包。完整下载本压缩包后，不要解压，可以直接丢压缩包到antigravity里说“帮我装到agy-meme里”。或者手动在侧边栏导入。
