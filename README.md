@@ -30,7 +30,7 @@
 
 <img width="409" height="392" alt="image" src="https://github.com/user-attachments/assets/89c089e3-300c-4841-af72-10105487e60f" />
 
-✨在antigravity里用claude大小姐的可以再装上这套。我刚导出了带暗号格式的表情包压缩包。完整下载本压缩包后，不要解压，可以直接丢压缩包到antigravity里说“帮我装到agy-meme里”。或者手动在侧边栏导入。
+✨在antigravity里用claude大小姐的可以再装上这套。带暗号格式的表情包压缩包。完整下载本压缩包后，不要解压，可以直接丢压缩包到antigravity里说“帮我装到agy-meme里”。或者手动在侧边栏导入。
 
 ## 选图和回图
 
