@@ -16,7 +16,7 @@
   
 ## 安装
 
-**[点我直接下载](https://github.com/user-attachments/files/35278287/agy-meme-0.1.1.zip)**
+**[点我直接下载](https://github.com/Aster-Sirius-gemigemi/agy-meme/releases/download/v0.1.2/agy-meme-0.1.2.zip)**
 
 
 
