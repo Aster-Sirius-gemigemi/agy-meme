@@ -62,7 +62,7 @@ def dispatch(req):
     if method=="initialize":
         versions=("2025-11-25","2025-06-18","2025-03-26","2024-11-05")
         v=p.get("protocolVersion")
-        return dict(protocolVersion=v if v in versions else versions[0],capabilities={"tools":{},"resources":{}},serverInfo={"name":"agy-meme","version":"0.1.1"})
+        return dict(protocolVersion=v if v in versions else versions[0],capabilities={"tools":{},"resources":{}},serverInfo={"name":"agy-meme","version":"0.1.2"})
     if method=="ping": return {}
     if method=="tools/list": return {"tools":TOOLS}
     if method=="resources/list": return {"resources":[{"uri":URI,"name":"🐱 表情图库","mimeType":MIME}]}

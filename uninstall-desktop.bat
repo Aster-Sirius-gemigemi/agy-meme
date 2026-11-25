@@ -6,4 +6,6 @@ if errorlevel 1 (
 ) else (
   py -3 -B -X utf8 scripts\desktop.py uninstall
 )
-if errorlevel 1 pause
+set "result=%errorlevel%"
+if not "%result%"=="0" pause
+exit /b %result%

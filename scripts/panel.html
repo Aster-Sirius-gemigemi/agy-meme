@@ -118,7 +118,7 @@ byId('zip').onchange=handle(async e=>{
 });
 byId('exportBtn').onclick=handle(async()=>{const r=await call('export_pack');statusBox.textContent='已导出 '+r.count+' 张：'+r.path});
 handle(async()=>{
-  await request('ui/initialize',{appInfo:{name:'agy-meme',version:'0.1.1'},appCapabilities:{},protocolVersion:'2026-01-26'});
+  await request('ui/initialize',{appInfo:{name:'agy-meme',version:'0.1.2'},appCapabilities:{},protocolVersion:'2026-01-26'});
   parent.postMessage({jsonrpc:'2.0',method:'ui/notifications/initialized',params:{}},'*');
   await refresh();
   window.addEventListener('focus',handle(()=>refresh(true)));

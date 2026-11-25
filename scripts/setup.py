@@ -23,7 +23,7 @@ def main(action):
         print("Already installed.");return
     with tempfile.TemporaryDirectory(dir=plugins,prefix=".agy-meme-stage-") as tmp:
         stage=Path(tmp)/"new";previous=Path(tmp)/"previous"
-        shutil.copytree(ROOT,stage,ignore=shutil.ignore_patterns("__pycache__","*.pyc"))
+        shutil.copytree(ROOT,stage,ignore=shutil.ignore_patterns(".git","__pycache__","*.pyc"))
         (stage/".agy-meme-install").write_text("agy-meme\n","ascii")
         if target.exists(): target.rename(previous)
         try: stage.rename(target)
